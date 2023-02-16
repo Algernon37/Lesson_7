@@ -39,7 +39,7 @@ void SearchArray(int[,] matrix)
     {
         for (int columns = 0; columns < matrix.GetLength(1); columns++)
         {
-            if (rows == a & rows == b)
+            if (rows == a & columns == b)
             {
                 result = matrix[rows,columns];
             }
@@ -48,6 +48,10 @@ void SearchArray(int[,] matrix)
     if (result == 0)
     {
         Console.WriteLine("Такого элемента нет");
+    }
+    else
+    {
+        Console.WriteLine($"Ваше число : {result}");
     }
 }
 
