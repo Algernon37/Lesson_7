@@ -14,7 +14,6 @@ Console.WriteLine("Сколько строчек в массиве?");
 int n = Convert.ToInt32(Console.ReadLine());
 double [,] table = new double [n,m];
 
-
 void FillArray(double[,] matrix)
 {
     for (int columns = 0; columns < matrix.GetLength(0); columns++)
