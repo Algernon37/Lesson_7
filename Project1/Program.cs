@@ -16,12 +16,12 @@ double [,] table = new double [n,m];
 
 void FillArray(double[,] matrix)
 {
-    for (int columns = 0; columns < matrix.GetLength(0); columns++)
+    for (int rows = 0; rows < matrix.GetLength(0); rows++)
     {
-        for (int rows = 0; rows < matrix.GetLength(1); rows++)
+        for (int columns = 0; columns < matrix.GetLength(1); columns++)
         {
-            matrix[columns,rows] = matrix[columns,rows] = new Random().Next(-9,10);
-            Console.Write($"{matrix[columns,rows]} ");
+            matrix[rows,columns] = matrix[rows,columns] = new Random().Next(-9,10);
+            Console.Write($"{matrix[rows,columns]} ");
         }
         Console.WriteLine();
     } 
