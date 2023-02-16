@@ -16,12 +16,12 @@ int [,] table = new int [n,m];
 
 void FillArray(int[,] matrix)
 {
-    for (int columns = 0; columns < matrix.GetLength(0); columns++)
+    for (int rows = 0; rows < matrix.GetLength(0); rows++)
     {
-        for (int rows = 0; rows < matrix.GetLength(1); rows++)
+        for (int columns = 0; columns < matrix.GetLength(1); columns++)
         {
-            matrix[columns,rows] = matrix[columns,rows] = new Random().Next(1,10);
-            Console.Write($"{matrix[columns,rows]} ");
+            matrix[rows,columns] = matrix[rows,columns] = new Random().Next(1,10);
+            Console.Write($"{matrix[rows,columns]} ");
         }
         Console.WriteLine();
     } 
@@ -35,13 +35,13 @@ void SearchArray(int[,] matrix)
     int b = Convert.ToInt32(Console.ReadLine());
     int result = 0;
 
-    for (int columns = 0; columns < matrix.GetLength(0); columns++)
+    for (int rows = 0; rows < matrix.GetLength(0); rows++)
     {
-        for (int rows = 0; rows < matrix.GetLength(1); rows++)
+        for (int columns = 0; columns < matrix.GetLength(1); columns++)
         {
-            if (columns == a & rows == b)
+            if (rows == a & rows == b)
             {
-                result = matrix[columns,rows];
+                result = matrix[rows,columns];
             }
         }
     } 
